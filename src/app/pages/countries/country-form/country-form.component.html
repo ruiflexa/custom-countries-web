@@ -53,7 +53,10 @@
         <button 
           type="submit" class="btn btn-primary" (click)="updateCountry(currentCountry)">Atualizar</button> &nbsp;
         <button type="button" class="btn btn-info" (click)="back()">Voltar</button>
-        <p>{{ message }}</p>
+        <br/>
+          <div *ngIf="message" class="alert alert-info">
+          <p class="text-center">{{ message }}</p>
+          </div>
       </div>
     </div>
 </div>
@@ -104,11 +107,14 @@
               />
             </div>
         </form>    
-        <div class="text-right"  *ngIf="currentCustomCountry">
+        <div class="text-right" *ngIf="currentCustomCountry">
           <button 
             type="submit" class="btn btn-primary" (click)="updateCountry(currentCustomCountry)">Atualizar</button> &nbsp;
           <button type="button" class="btn btn-info" (click)="back()">Voltar</button>
-          <p>{{ message }}</p>
+          <br/>
+          <div *ngIf="message" class="alert alert-info">
+          <p class="text-center">{{ message }}</p>
+          </div>
         </div>
       </div>  
   </div>
