@@ -1,0 +1,77 @@
+<app-page-header page-title="Países"></app-page-header>
+
+    <div class="col-md-4" *ngIf="!currentCountry">
+      <div class="input-group mb-3">
+        <input type="text" class="form-control" placeholder="Buscar por nome"  [(ngModel)]="name"/>
+        <div class="input-group-append">
+          <button class="btn btn-outline-secondary" type="button" (click)="searchCountries()">Buscar</button>
+        </div>
+      </div>
+    </div>
+  
+    <div class="col-md-12" *ngIf="!currentCountry">
+      <pagination-controls
+        previousLabel="Anterior"
+        nextLabel="Próximo"
+        responsive="true"
+        (pageChange)="handlePageChange($event)"
+      ></pagination-controls>
+    </div>
+    <div class="col-md-12" *ngIf="!currentCountry">
+      <h4>Países</h4>
+      <div class="row row-cols-1 row-cols-md-6">
+        <div class="col mb-2"  
+        *ngFor="
+            let country of countries | paginate : {
+                    itemsPerPage: pageSize,
+                    currentPage: page,
+                    totalItems: count
+                };
+            let i = index
+        ">
+            <div class="card h-100">
+              <img src="{{country.flag.svgFile}}" class="card-img-top" style="height: 180px;" alt="{{country.name}}">
+              <div class="card-body">
+                <h4 class="card-title">{{ country.name }}</h4>
+                <p class="card-text">{{ country.capital }}</p>
+                <a (click)="selectCountry(country, i)" class="btn btn btn-light">Exibir</a>&nbsp;<a (click)="editCountry(country)" class="btn btn-primary">Editar</a>&nbsp;&nbsp;                
+                <span *ngIf="country.isCustomInformation" class="fas fa-award" data-toggle="tooltip" title="País com Informações Customizadas"></span>                
+              </div>
+            </div>
+          </div>      
+      </div>
+    </div>  
+
+    <div class="col-md-12" *ngIf="currentCountry">        
+        <div>
+          <h4>País</h4>
+          <div>
+              <label><strong>Nome:</strong></label> {{ currentCountry.name }}
+          </div>
+          <div>
+              <label><strong>Capital:</strong></label>
+              {{ currentCountry.capital }}
+          </div>
+          <div>
+              <label><strong>Área:</strong></label>
+              {{ currentCountry.area | number }}
+          </div>
+          <div>
+              <label><strong>População:</strong></label>
+              {{ currentCountry.population | number }}
+            </div>
+            <div>
+              <label><strong>Nome Nativo:</strong></label>
+              {{ currentCountry.nativeName }}
+            </div>
+          <a class="btn btn-link" (click)="searchCountries()" ><< Voltar para Lista</a>
+        </div>
+    </div>
+    <div class="mt-3" *ngIf="!currentCountry">
+      Itens por página:
+      <select (change)="handlePageSizeChange($event)">
+        <option *ngFor="let size of pageSizes" [ngValue]="size">
+          {{ size }}
+        </option>
+      </select>
+    </div>
