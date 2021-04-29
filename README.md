@@ -15,17 +15,19 @@ Alguns plugins/pacotes utilizados:
 - Subir a API (http://github.com/ruiflexa/custom-countries-api)  bem como a API Graph Countries (https://github.com/lennertVanSever/graphcountries). Para subir estas APIs basta seguir as orientações no README dos respectivos repositórios
 - Rodar o comando ng s (acesso do site está no endereço padrão do Angular - http://localhost:4200
 
-Telas
-![image](https://user-images.githubusercontent.com/23639567/116627062-cbe9a000-a922-11eb-83ea-fa4a7f2974ad.png)
+- Telas
+
 Login
+![image](https://user-images.githubusercontent.com/23639567/116627062-cbe9a000-a922-11eb-83ea-fa4a7f2974ad.png)
 
-![image](https://user-images.githubusercontent.com/23639567/116627105-e459ba80-a922-11eb-8ab6-917aece77a16.png)
 Tela de listagem
+![image](https://user-images.githubusercontent.com/23639567/116627105-e459ba80-a922-11eb-8ab6-917aece77a16.png)
 
-![image](https://user-images.githubusercontent.com/23639567/116627128-f0de1300-a922-11eb-95ff-95e72cfbf091.png)
 País quando não tem informações customizadas 
+![image](https://user-images.githubusercontent.com/23639567/116627128-f0de1300-a922-11eb-95ff-95e72cfbf091.png)
 
-![image](https://user-images.githubusercontent.com/23639567/116627194-08b59700-a923-11eb-9467-5a669de691a3.png)
 País quando tem informações customizadas
+![image](https://user-images.githubusercontent.com/23639567/116627194-08b59700-a923-11eb-9467-5a669de691a3.png)
+
 
 
