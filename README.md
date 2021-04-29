@@ -10,9 +10,10 @@ Alguns plugins/pacotes utilizados:
 - ngx-pagination: package utilizado para paginação (grids, cards, etc)
 
 # Orientações para subir a aplicação
-- rodar o comando npm install para instalar as dependências
+- Rodar o comando npm install para instalar as dependências
 - apontar no arquivo environment.ts na propriedade apiUrl o link da API (ex.: https://localhost:5001/api)
 - Subir a API (http://github.com/ruiflexa/custom-countries-api)  bem como a API Graph Countries (https://github.com/lennertVanSever/graphcountries). Para subir estas APIs basta seguir as orientações no README dos respectivos repositórios
+- Rodar o comando ng s (acesso do site está no endereço padrão do Angular - http://localhost:4200
 
 Telas
 ![image](https://user-images.githubusercontent.com/23639567/116627062-cbe9a000-a922-11eb-83ea-fa4a7f2974ad.png)
