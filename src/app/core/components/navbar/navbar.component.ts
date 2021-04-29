@@ -19,8 +19,12 @@ export class NavbarComponent implements OnInit {
   }
 
   userName(): string {
-    this.userLogged = JSON.parse(localStorage.getItem('currentUser'));
-    return this.userLogged.userName;
+    if (localStorage.getItem('currentUser') != null){
+      this.userLogged = JSON.parse(localStorage.getItem('currentUser'));
+      return this.userLogged.userName;
+    } else {
+      return "";
+    }
   }
   
   logout() {

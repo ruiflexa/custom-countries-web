@@ -24,7 +24,6 @@ export class AuthenticationService {
     login(username: string, password: string) {
         return this.http.post<any>(`${environment.apiUrl}/auth/login`, { username, password })
             .pipe(map(user => {
-                
                 user.authdata = window.btoa(username + ':' + password);
                 localStorage.setItem('currentUser', JSON.stringify(user));
                 this.currentUserSubject.next(user);
@@ -33,7 +32,6 @@ export class AuthenticationService {
     }
 
     logout() {
-        
         localStorage.removeItem('currentUser');
         this.currentUserSubject.next(null);
         this.router.navigate(["/login"]);
