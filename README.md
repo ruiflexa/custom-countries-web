@@ -1,5 +1,5 @@
 # Countries Web
-Custom Countries - Desafio Técnico SoftPlan Angular
+Custom Countries - Desafio Técnico Angular
 
 # Arquitetura da Aplicação
 A aplicação é uma Single Page Application (SPA) rodando na versão 10 do Angular, na qual os recursos que compõem as interfaces são carregados dinamicamente conforme demanda. A responsividade da aplicação é implementada com base no framework front-end Bootstrap 4. O roteamento entre telas/interfaces é realizado pelo módulo de roteamento do Angular no front-end ao longo das interações do usuário com as funcionalidades do sistema.
